@@ -1,6 +1,6 @@
 ﻿# Projekt - OWASP10
 
-## Besprechungsprotokoll vom 16.11.2017
+## Besprechungsprotokoll vom 16.11.2017 | Nächste Treffen am 28.11.2017 |
 * Protokollant: Simeon Weigel
 * Thema: Konzeptionsfindung
 * Ort: Minden
@@ -46,5 +46,5 @@ Info¹ | Beschreibung | Wer | Bis Wann
  O| Fragebogen für Tests erstellen| Simeon | 28.11.17
  O| Über DaVinci Resolve 14 informieren, Beispielvideo erstellen, Einweisung für alle Teilnehmer beim nächsten Treffen| Devin| 28.11.17
  -----------------|-----------------|----------------|----------------
-  I| Das nächste Treffen findet am 28.11.2017 statt. | - |- 
+
 *¹ I -> Info, O -> Order, D -> Decision, A -> Anweisung, P -> Problem
