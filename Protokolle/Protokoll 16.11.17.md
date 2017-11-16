@@ -1,4 +1,4 @@
-﻿# Projekt - Komponentenbasierte Softwareentwicklung
+﻿# Projekt - OWASP10
 
 ## Besprechungsprotokoll vom 16.11.2017
 * Protokollant: Simeon Weigel
