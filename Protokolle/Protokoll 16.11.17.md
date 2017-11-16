@@ -28,7 +28,7 @@ Info¹ | Beschreibung | Wer | Bis Wann
  D| Testen durch Nutzerevaluierungstest( 3 Gruppen: Teilnehmer aus gleichem Fach, gleichem Studiengang und fremde Personen | - | -
  I| In den Videos gibt es eine Erklärung und eine Angriffsvorführung | - | -
  I| Es wird DaVinci Resolve 14 als Programm genutzt. | - | -
- I| Der Steckbrief beinhalet folgende Punkte: <br>Name des Angriffs<br>Ziel des Angreifers<br>Schutzmaßnahmen<br>Angrissszenarios<br>Gefährdete Personengruppen<br>Umgebung<br>Merkmal
+ I| Der Steckbrief beinhalet folgende Punkte: <br>Name des Angriffs<br>Ziel des Angreifers<br>Schutzmaßnahmen<br>Angriffszenarios<br>Gefährdete Personengruppen<br>Umgebung<br>Merkmal
  -----------------|-----------------|----------------|----------------
  O| Website anpassen mit Steckbriefen und Überlegungen bezüglich einbinden der Videos | Daniel N. | 28.11.17
  O| Steckbrief für A1&A7 ins Repo pushen | Nicolai | 21.11.17
