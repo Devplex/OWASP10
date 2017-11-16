@@ -16,6 +16,7 @@
   <meta name="description" content="OWASP Top Ten Projektseite">
   <link rel="stylesheet" href="../css/w3.css">
   <link rel="stylesheet" href="../css/w3-theme-black.css">
+  <link rel="shortcut icon" href="../favicon.ico?v=1">
   <style>
   html,body,h1,h2,h3,h4,h5,h6 {font-family: "Arial", sans-serif;}
   .w3-sidebar {
