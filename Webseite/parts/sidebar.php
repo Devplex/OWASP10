@@ -16,7 +16,7 @@
   <a class="w3-bar-item w3-button w3-hover-black" href="../templates/a1-template.php">Nummer 1 SQL-Injektion</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="../templates/a2-template.php">Nummer 2 Broken Authentication</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="../templates/a3-template.php">Nummer 3 Cross-Site Scripting (XSS)</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Nummer 4 XML External Entity (XXE)</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="../templates/a4-template.php">Nummer 4 XML External Entity (XXE)</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="#">Nummer 5 Broken Access Control</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="#">Nummer 6 Security Misconfiguration</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="#">Nummer 7 Sensitive Data Exposure</a>
