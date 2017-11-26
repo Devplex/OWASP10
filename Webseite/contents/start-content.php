@@ -19,7 +19,7 @@
          es wird gezeigt, wie die eigene Web Appliktion hinreichend gegen diesen abgehärtet werden kann.
          Somit sollte nach erarbeitung aller in der linken Navigationsleiste aufgelisteten
          Angriffe ein solides Verständnis eben jener Angriffe vorhanden sein.</p>
-      <p>Direkt loslegen: <a href="#">OWASP Nummer 1 - SQL Injektionen</a></p>
+      <p>Direkt loslegen: <a href="../templates/a1-template.php">OWASP Nummer 1 - SQL Injektionen</a></p>
       <br><br>
       <h3>Mehr Infos zur Projekseite?</h3>
       <p><a href="../templates/about.php">Über OWASP</a></p>

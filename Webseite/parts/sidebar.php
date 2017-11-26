@@ -13,7 +13,7 @@
     <i>x</i>
   </a>
   <h4 class="w3-bar-item"><b>Menü</b></h4>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Nummer 1 SQL-Injektion</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="../templates/a1-template.php">Nummer 1 SQL-Injektion</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="#">Nummer 2 Broken Authentication</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="#">Nummer 3 Sensitive Data Exposure</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="#">Nummer 4 XML External Entity (XXE)</a>
