@@ -21,8 +21,8 @@
   <a class="w3-bar-item w3-button w3-hover-black" href="../templates/a6-template.php">Nummer 6 Sensitive Data Exposure</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="../templates/a7-template.php">Nummer 7 Security Misconfiguration</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="../templates/a8-template.php">Nummer 8 Insecure Deserialization</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Nummer 9 Using Components with known Vulnerabilities</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="#">Nummer 10 Insufficient Logging &amp; Monitoring</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="../templates/a9-template.php">Nummer 9 Using Components with known Vulnerabilities</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="../templates/a10-template.php">Nummer 10 Insufficient Logging &amp; Monitoring</a>
 </nav>
 
 <!-- Überlagerungs Effekt, wenn die Sidebar auf kleinen Bildschirmen geöffnet wird. -->
