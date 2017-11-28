@@ -1,0 +1,42 @@
+Ziel:
+
+	Unautorisierte Manipulationen und Zugriffe auf systeminterne Datenbanken.
+
+
+Umgebung:
+
+	Websites mit Datenbank Systemen wie:
+
+		SQL,
+		LDAP,
+		XPath,
+		NoSQL,
+		Betriebssystembefehlen,
+		XML,
+		SMTP-Headern
+
+
+Umsetzung:
+
+	Benutzereingaben, welche an die Datenbank gekoppelt sind und die Benutzer-
+	eingaben unvalidert interpretieren, realisieren eine Injection.
+
+Konkretes Beispiel:
+
+	Angenommen Paypal nutzt SQL als Datenbankverwaltung.
+	Das Paypal-Website-Suchfeld gibt eine Exception zur�ck sofern man ein ";" eingibt.
+	Somit ist nun klar, dass die M�glichkeit besteht, konkrete SQL Befehle �bers Suchfeld einzugeben.
+	Nun w�re es m�glich durch diverse SQL Befehle unbemerkt Umbuchungen von Verm�gen diverser
+	Paypal Anwender zum gunsten des Angreifers zu Manipulieren. (�berweisung von fremd Guthaben
+	auf das eigene Paypal Konto)
+
+Schutz:
+
+	Benutzereingaben darf grunds�tzlich nicht vertraut werden und somit d�rfen diese niemals
+	interpretierbar sein. Sie bed�rfen eine Validierung.
+
+Unterschied XSS:
+
+	Bei der Injection hat das Opfer (Paypal-Benutzer) nur eine passive Rolle. Bei XSS ist es dem Benutzer
+	noch m�glich einem Angriff zu entgehen indem er rechtzeitig bemerkt, dass die URL b�sartig ist, somit
+	ist er aktiv involviert.

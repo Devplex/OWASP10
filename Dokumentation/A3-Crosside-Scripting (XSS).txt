@@ -1,0 +1,43 @@
+Ziel:
+
+	Dem Opfer intime Benutzerdaten entlocken oder ihn gezielt auf bösartige Webites umleiten.
+
+Umgebung:
+
+	Allgemein Websites mit Benutzereingabefeldern.
+
+
+Umsetzung:
+
+	Einfügen von konkreten HTML Anweisungen innerhalb eines Suchtextfeldes auf einer 
+	Website mit der Sicherheitslücke. Dies führt dazu, dass die eingegebene HTML Anweisung 
+	interpretiert wird.
+
+	Aus der gegebenen Suchanfrage wird eine URL generiert, welche ggf. die eben eingefügten
+	HTML Anweisung inkludiert. Nun kann diese an mögliche Opfer (z.B. via Phising) versendet 
+	werden.
+
+
+Konkretes Beispiel:
+
+	Angenommen Paypal besitzt eine Lücke, welche XSS erlaubt.
+	Somit ist es als Angreifer möglich innerhalb der ligitimen Paypal Website eine HTML Anweisung
+	zu schreiben und die daraus generierte URL an dem Opfer zu versenden
+	welche dem Opfer vorgaugelt er müsse bitte seine vertraulichen Zugangsdaten eingeben,
+	welche wiederum vom Opfer unbemerkt an dritte weitergeleitet werden.
+
+	Desweiteren wäre es auch möglich statt gefälschter Eingabeformulare ein bösartiges Skript
+	auszuführen oder durch <Iframe> eine andere bösartige Website innerhalb der Paypal Website
+	zu öffnen.
+
+
+Schutz:
+
+	Benutzereingaben darf grundsätzlich nicht vertraut werden und somit dürfen diese niemals 
+	interpretierbar sein. Sie bedürfen eine Validierung.
+
+Unterschied Injection:
+
+	Bei der Injection hat das Opfer (Paypal-Benutzer) nur eine passive Rolle. Bei XSS ist es dem Benutzer
+	noch möglich einem Angriff zu entgehen indem er rechtzeitig bemerkt, dass die URL bösartig ist, somit
+	ist er aktiv involviert.

@@ -1,0 +1,31 @@
+Ressourcen:
+
+	*Desktop-Camcorder (wie Camtasia Studio)
+
+	*2x primitive index.html (einmal mit Injection Lücke und einmal in geschützt)
+
+		-Button: "Anmelden"
+		-Inputfeld: "Benutzername"
+		-Inputfeld: "Password"
+
+	*primitive SQLite Datenbank
+
+		-Table: Benutzer
+			-Benutzername
+			-Password
+
+	*Eventuell Mikrophon für Sprachaufzeichnungen
+
+
+Vorbereitung:
+
+	Simple SQLite Datenbank und primitive index.html erzeugen, welche die Funktionalität
+	eines Anmeldevorgangs abbildet.
+
+Durchführung:
+
+	Den Injection Vorgang anhand eines Desktop-Camcorders aufzeichnen und mit Sprachaufnahmen oder 
+	Textblock Einblendungen unterlegen.
+
+	Es soll zunächst gezeigt werden wie der Angriff möglich ist und anschließend wie man sich davor
+	schützen kann.

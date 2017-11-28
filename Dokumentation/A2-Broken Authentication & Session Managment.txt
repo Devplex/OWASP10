@@ -1,0 +1,41 @@
+Name:
+	Broken Authentication & Session Managment
+
+Ziel: 
+	Erfassung oder Umgehung von Authentifizierungsmethoden
+ 	zum Schutz vor unberechtigtem Zugriff ermöglichen
+
+Schutzmaßnahmen:
+
+	- nur starke Passwörter erlauben
+	- Session ID sollte nach einer bestimmten Zeit oder nach logout ungültig werden
+	- Daten sollten neben der Verschlüsselung zusätzlich gehasht werden
+	- sensible Daten sollten im Body part einer POST Anfrage gesendet werden
+
+Angriffszenarios:
+	
+	- Man in the Middle Attack
+	- Textdaten vom Server stehlen
+
+Gefährdete Personengruppen:
+
+	- Jede Person mit einem Online Account jeglicher Art 
+
+Umgebung:
+
+	- Allgemein Websites
+
+Merkmal:
+
+	- Unencrypted connections(jeder kann Datenübertragung einsehen zwischen User 
+	  und Webappaplikation durch bspw. Man in the Middle)
+	- Predictable Login Credentials(Usernames und Passwörter die leicht zu erraten
+	  oder werden oft benutzt, sodass ein Angreifer unautorisierten Zugriff hat)
+	- Session ID value hat kein Timeout o. wird nicht ungültig gemacht nach logout(wenn
+	  jmd Session ID bekommt kann er ohne Logindaten Zugriff bekommen -> zurück
+	  Button im Browser)
+	- Authentifizierungsdaten werden beim Speichern nicht geschützt,
+	  Daten sind im einfachen Text einsehbar	
+	- Session IDs werden im URL benutzt
+	  Session ID value wird im URL String übertragen und sichtbar gemacht
+	  z.B. http://bank.com/login.jsp?sessionid=abcd

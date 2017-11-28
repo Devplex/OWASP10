@@ -1,0 +1,30 @@
+Name des Angriffs
+XML External Entity (XXE)
+
+Ziel des Angreifers
+- Offenlegung vertraulicher Daten
+- Denial of Service
+- Remote-Code-Ausführung
+
+Schutzmaßnahmen
+- Bei sämtlichen XML-Parsern in der Applikation die Verarbeitung von externen XML-Entitäten und DTDs deaktivieren.
+- Implementierung von Eingabevalidierungen oder Filterung um gefährliche Daten innerhalb XML-Dokumenten oder Headern zu verhindern.
+- Verifizieren, dass XML- oder XSL-Datei-Upload-Funktionalität eingehende XML-Dateien mithilfe von XSD-Validierung validiert.
+- Patchen oder Upgraden aller XML-Prozessoren und Bibliotheken, die von der Applikation genutzt werden oder auf dem zugrundeliegenden Betriebssystem. Die Nutzung von Dependency-Checkern ist entscheidend um das Risiko von notwendigen Bibliothken und Komponenten in einer Applikation managen zu können.
+- Upgraden von SOAP auf die neueste Version.
+
+Angriffszenarios
+Upload einer schädlichen XML-Datei:
+- Angreifer versucht Daten vom Server zu extrahieren
+- Angreifer bringt etwas über das private Netzwerk des Servers in Erfahrung
+- Angreifer versucht einen Denial-of-Service-Angriff zu starten, indem er eine potenziell endlose Datei inkludiert
+
+Gefährdete Personengruppen
+- Personen oder Unternehmen, die XML-basierte Webservices besitzen
+
+Umgebung
+- Applikationen und insbesondere XML-basierte Webservices, die XML direkt oder XML-Uploads akzeptieren; oder die nicht vertrauenswürdige Daten in XML-Dokumente einfügt, welche anschließend von einem XML-Prozessor geparst werden.
+- Eine der XML-Prozessoren in der Applikation oder in den SOAP-basierten Webservices hat DTDs aktiviert.
+
+Merkmal
+- schwach konfiguerierter XML-Parser, der Spezifierung von externen Entitäten(eine URI, die während der XML-Verarbeitung dereferenziert und evaluiert wird) erlaubt.

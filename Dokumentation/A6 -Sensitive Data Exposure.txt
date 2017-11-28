@@ -1,0 +1,36 @@
+Name:
+	Sensitive Data Exposure
+
+Ziel:
+	Beschaffung von sensiblen Daten z.B. Passwörter, Kreditkarten Daten etc.
+
+Schutzmaßnahmen:
+
+	-sensible Daten nicht unnötig speichern, so früh wie möglich verwerfen
+	-starke Algorithmen und Schlüssel verwenden und ordnungsgemäße Schlüsselverwaltung vorhanden
+	-Passwörter sollten mit einem speziell für den Passwortschutz entwickelten Algorithmus
+ 	 gespeichert werden
+	-Autovervollständigung in Formularen mit sensiblen Daten deaktivieren
+	-Zwischenspeicherung für Seiten mit vertraulichen Daten deaktivieren
+	-Passwortmaske
+
+Angriffszenarios:
+	
+	-Man in the Middle Attack
+	-Textdaten vom Server stehlen
+
+Gefährdete Personengruppen:
+
+	-Jede Person mit einem Online Account jeglicher Art
+
+Umgebung:
+
+	-Allgemein Websites
+
+Merkmal:
+
+	-sensible Daten nicht verschlüsselt
+	-schwache Schlüsselerzeugung,-management
+	-schwache Algorithmen
+	-schwache Passwort hashing techniken
+
