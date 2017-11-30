@@ -39,7 +39,7 @@ Info¹ | Beschreibung | Wer | Bis Wann
  O| Steckbrief für A6&A8 überarbeiten | Dominik | 05.12.17
  O| Steckbrief für A9&A10 ggbf. ergänzen | Michael | 05.12.17
  O| KOMPLETT fertiges Grobkonzept + Sprechtext der Videos | ALLE | 12.12.17
- O| Hacking Challange | Alle | 05.01.18
+ O| Hacking Challenge | Alle | 05.01.18
  -----------------|-----------------|----------------|----------------
 
  O| Rechtschreib und Grammatiküberprüfung der Steckbriefe + Doku | Simeon | 07.12.17
