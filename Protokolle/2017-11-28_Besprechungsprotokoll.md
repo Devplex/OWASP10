@@ -40,11 +40,10 @@ Info¹ | Beschreibung | Wer | Bis Wann
  O| Steckbrief für A9&A10 ggbf. ergänzen | Michael | 05.12.17
  O| KOMPLETT fertiges Grobkonzept + Sprechtext der Videos | ALLE | 12.12.17
  O| Hacking Challenge | Alle | 05.01.18
- -----------------|-----------------|----------------|----------------
-
  O| Rechtschreib und Grammatiküberprüfung der Steckbriefe + Doku | Simeon | 07.12.17
- O| Implementierung der endgültigen Angriffsbeschreibungen + Überlegungen zum Einbinden der Videos auf der Website | Daniel N. | 12.12.17
- O| Beispielvideo erstellen, kleine Doku, benutzte Tools, Ressourcen, Bibs etc.,  Einweisung für alle beim nächsten Treffen(Verschiebung wegen Krankheit) Skype mit Michael falls noetig| Devin| 12.12.17
+ O| Implementierung endgültige Angriffsbeschr. + Überlegungen zum Einbinden der Videos auf der Website | Daniel N. | 12.12.17
+ O| Beispielvideo erstellen, kleine Doku, benutzte Tools, Ressourcen, Bibs etc.| Devin| 12.12.17
+ O|  Einweisung für alle beim nächsten Treffen(Verschiebung wegen Krankheit) Skype mit Michael falls noetig| Devin| 12.12.17
  -----------------|-----------------|----------------|----------------
 
 *¹ I -> Info, O -> Order, D -> Decision, A -> Anweisung, P -> Problem
