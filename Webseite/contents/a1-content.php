@@ -55,6 +55,21 @@
     </div>
   </div>
 
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h3>Video zum Angriff</h3>
+      <p>Super wichtig aussehender Text der richtig interessante Informationen.
+         Beinhaltet die einen so richtig weiter bringen im Leben!</p>
+    </div>
+    <div class="w3-third w3-container">
+      <h4>Video</h4>
+      <video width="320" height="240" controls>
+        <source src="../res/videos/test.mp4" type="video/mp4">
+        Dein Browser Unterstürtzt keine Videos!
+      </video>
+    </div>
+  </div>
+
   <?php include '../parts/footer.php'; ?>
 
 </div>
