@@ -13,7 +13,7 @@
     <h4>OWASP Top Ten Projektseite</h4>
     <h5>Mitglieder:</h5>
     <p>Daniel Nagel | Devin-Alexander Meier | Simeon Weigel | Michael Frevert | Nicolai Kloß | Daniel Sprick | Eduard Ljaschenko | Dominik Schulz</p>
-    <p><img src="../res/owasp-logo-small.png" alt="Logo" height="30" width="30"> | <?php echo date("Y");?></p>
+    <p><img src="../res/img/owasp-logo-small.png" alt="Logo" height="30" width="30"> | <?php echo date("Y");?></p>
   </div>
 
   <div class="w3-container w3-theme-l1">

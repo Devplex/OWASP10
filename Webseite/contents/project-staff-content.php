@@ -19,7 +19,7 @@
       <ul>
     </div>
     <div class="w3-third w3-container">
-      <img src="../res/profile-anon.png" alt="OWASP Logo" height="360" width="315">
+      <img src="../res/img/profile-anon.png" alt="OWASP Logo" height="360" width="315">
     </div>
   </div>
 
@@ -33,7 +33,7 @@
       <ul>
     </div>
     <div class="w3-third w3-container">
-      <img src="../res/profile-anon.png" alt="OWASP Logo" height="360" width="315">
+      <img src="../res/img/profile-anon.png" alt="OWASP Logo" height="360" width="315">
     </div>
   </div>
 
@@ -45,7 +45,7 @@
       <ul>
     </div>
     <div class="w3-third w3-container">
-      <img src="../res/profile-anon.png" alt="OWASP Logo" height="360" width="315">
+      <img src="../res/img/profile-anon.png" alt="OWASP Logo" height="360" width="315">
     </div>
   </div>
 
@@ -59,7 +59,7 @@
       <ul>
     </div>
     <div class="w3-third w3-container">
-      <img src="../res/profile-anon.png" alt="OWASP Logo" height="360" width="315">
+      <img src="../res/img/profile-anon.png" alt="OWASP Logo" height="360" width="315">
     </div>
   </div>
 
@@ -72,7 +72,7 @@
       <ul>
     </div>
     <div class="w3-third w3-container">
-      <img src="../res/profile-anon.png" alt="OWASP Logo" height="360" width="315">
+      <img src="../res/img/profile-anon.png" alt="OWASP Logo" height="360" width="315">
     </div>
   </div>
 
@@ -85,7 +85,7 @@
       <ul>
     </div>
     <div class="w3-third w3-container">
-      <img src="../res/profile-anon.png" alt="OWASP Logo" height="360" width="315">
+      <img src="../res/img/profile-anon.png" alt="OWASP Logo" height="360" width="315">
     </div>
   </div>
 
@@ -98,7 +98,7 @@
       <ul>
     </div>
     <div class="w3-third w3-container">
-      <img src="../res/profile-anon.png" alt="OWASP Logo" height="360" width="315">
+      <img src="../res/img/profile-anon.png" alt="OWASP Logo" height="360" width="315">
     </div>
   </div>
 
@@ -112,7 +112,7 @@
       <ul>
     </div>
     <div class="w3-third w3-container">
-      <img src="../res/profile-anon.png" alt="OWASP Logo" height="360" width="315">
+      <img src="../res/img/profile-anon.png" alt="OWASP Logo" height="360" width="315">
     </div>
   </div>
 

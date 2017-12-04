@@ -46,7 +46,7 @@
       </ul>
     </div>
     <div class="w3-third w3-container">
-      <img src="../res/owasp-logo-negative.png" alt="OWASP Logo" height="40%" width="100%">
+      <img src="../res/img/owasp-logo-negative.png" alt="OWASP Logo" height="40%" width="100%">
     </div>
   </div>
 
