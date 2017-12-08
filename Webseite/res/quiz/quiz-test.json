@@ -1,0 +1,17 @@
+{
+  "question":"Wer ist der Erfinder von Linux?",
+  "answers": [
+    {
+      "answer":"Linus Torvalds",
+      "correct":"1"
+    },
+    {
+      "answer":"Bill Gates",
+      "correct":"0"
+    },
+    {
+      "answer":"Batman",
+      "correct":"0"
+    }
+  ]
+}
