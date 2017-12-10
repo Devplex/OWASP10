@@ -29,18 +29,11 @@
     <div class="w3-container w3-padding-64">
       <div id="quizCard" class="w3-card-4" style="width:70%">
         <header class="w3-container  w3-light-grey">
-          <h3 id="Question">Ist das ein Cooles Quiz?</h3>
+          <h3 id="Question"></h3>
         </header>
-        <div class="w3-container w3-padding-64">
-          <input type="radio" name="answer" value="1"> Ja<br>
-          <input type="radio" name="answer" value="2"> Oh Ja<br>
-          <input type="radio" name="answer" value="3"> Verdammt nochmal, Ja
+        <div id="answerContainer" class="w3-container w3-padding-64">
         </div>
-        <div class="w3-container w3-grey">
-          <br>
-          <button onclick="nextQuestion()" class="w3-button w3-left w3-teal">
-                                                          Nächste Frage</button>
-          <p id="numOfQ" style="color:white; text-align:right">Fragen insgesamt: 1</p>
+        <div id="quizCardFooter" class="w3-container w3-grey">
         </div>
       </div>
     </div>

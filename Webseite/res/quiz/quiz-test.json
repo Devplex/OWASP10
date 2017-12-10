@@ -84,6 +84,23 @@
           "correct":"0"
         }
       ]
+    },
+    {
+      "question":"Welche Neigung hat jemand der an Arktophilie leidet?",
+      "answers": [
+        {
+          "answer":"Liebe zu Bären/Teddybären",
+          "correct":"1"
+        },
+        {
+          "answer":"Erregung durch Vergewaltigung anderer Menschen",
+          "correct":"0"
+        },
+        {
+          "answer":"Liebe zu fremden Dingen oder Menschen",
+          "correct":"0"
+        }
+      ]
     }
   ]
 }
