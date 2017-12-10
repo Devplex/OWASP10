@@ -27,7 +27,7 @@ function prepareQuiz(quiz) {
   rightAnswerCounter = 0;
   answerArray = new Array();
   buildQuizCard();
-  nextQuestion();
+  prepareNextQuestion();
   console.log("Quiz bereit!");
 }
 
@@ -36,7 +36,7 @@ function prepareQuiz(quiz) {
 * Ist keine Frage mehr vorhanden, wird das Quiz beendet.
 * Überprüft die vorherige Antwort.
 */
-function nextQuestion() {
+function prepareNextQuestion() {
   if(isQuizOver()) {
     return;
   }
@@ -49,8 +49,13 @@ function nextQuestion() {
     answerRadButtons[i].value = quizObject.questions[quizCounter].answers[i].correct;
   }
   answerRadButtons[0].checked = true;
+
+}
+
+function nextQuestion() {
   checkAnswer();
   quizCounter++;
+  prepareNextQuestion();
 }
 
 /* isQuizOver
@@ -99,6 +104,7 @@ function checkAnswer() {
       answer.correct = false;
     }
   }
+  console.log("Ausgewählte Antwort: " + checkedButton.nextSibling.textContent);
   answerArray.push(answer);
 }
 
@@ -233,5 +239,31 @@ function clearContainer(id) {
 }
 
 function createQuizSurvey() {
+  document.getElementById("Question").innerHTML = "Quiz Auswertung";
 
+  clearContainer("answerContainer");
+  var answerContainer = document.getElementById("answerContainer");
+  answerContainer.style = "text-align:left;";
+
+  answerContainer.appendChild(createEvaluationOfAnswer(answerArray[0]));
+  for(var i = 1; i < answerArray.length; i++) {
+    answerContainer.appendChild(document.createElement('hr'));
+    answerContainer.appendChild(createEvaluationOfAnswer(answerArray[i]));
+  }
+}
+
+function createEvaluationOfAnswer(answerObject) {
+  var heading = document.createElement('h3');
+  heading.innerHTML = answerObject.question;
+  var answer = document.createElement('p');
+  answer.innerHTML = answerObject.answer;
+  if(answerObject.correct) {
+    answer.style="color:green;";
+  } else {
+    answer.style="color:red;"
+  }
+  var evalContainer = document.createElement('div');
+  evalContainer.appendChild(heading);
+  evalContainer.appendChild(answer);
+  return evalContainer;
 }
