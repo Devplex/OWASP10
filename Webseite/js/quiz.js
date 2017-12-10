@@ -6,9 +6,9 @@
 
     JavaScript für das Quiz.
  *****************************************************************************/
-var quizObject = null;
-var quizCounter = 0;
-var answerArray = null;
+var quizObject = null; // die geparste JSON wird hier als globales Objekt gespeichert
+var quizCounter = 0; // globale Variable welche sich 'merkt' welche Frage gerade bearbeitet wird
+var answerArray = null; // Array mit den Antworten des Benutzers
 
 /* startQuiz
 * Holt das Quiz.
@@ -31,10 +31,9 @@ function prepareQuiz(quiz) {
   console.log("Quiz bereit!");
 }
 
-/* nextQuestion
+/* prepareNextQuestion
 * Bereitet die Quizkarte für die nächste Frage vor.
 * Ist keine Frage mehr vorhanden, wird das Quiz beendet.
-* Überprüft die vorherige Antwort.
 */
 function prepareNextQuestion() {
   if(isQuizOver()) {
@@ -52,7 +51,10 @@ function prepareNextQuestion() {
 
 }
 
-function nextQuestion() {
+/* checkAnswerAndPrepareNextQuestion
+* Überprüft die Antwort des Nutzers und bereitet die nächste Frage vor.
+*/
+function checkAnswerAndPrepareNextQuestion() {
   checkAnswer();
   quizCounter++;
   prepareNextQuestion();
@@ -104,7 +106,6 @@ function checkAnswer() {
       answer.correct = false;
     }
   }
-  console.log("Ausgewählte Antwort: " + checkedButton.nextSibling.textContent);
   answerArray.push(answer);
 }
 
@@ -121,6 +122,9 @@ function endQuiz() {
   buildEndQuizCard();
 }
 
+/* getAvgCorrectAnswers
+* Bildet den durchschnitt aus richtig beantworteten Fragen.
+*/
 function getAvgCorrectAnswers() {
   var rightAnswerCounter = 0;
   for(var i = 0; i < answerArray.length; i++) {
@@ -134,6 +138,9 @@ function getAvgCorrectAnswers() {
   return avgCorrectAnswers.toFixed(0);
 }
 
+/* buildEndQuizCard
+* Erstellt den Inhaltsteil der Quizkarte, wenn das Quiz beendet ist.
+*/
 function buildEndQuizCard() {
   // Quizkarte Header
   document.getElementById("Question").innerHTML = "Quiz beendet!";
@@ -150,6 +157,9 @@ function buildEndQuizCard() {
   buildEndQuizCardFooter();
 }
 
+/* buildEndQuizCardFooter
+* Erstellt den Footer der Quizkarte, wenn das Quiz beendet ist.
+*/
 function buildEndQuizCardFooter() {
   clearContainer("quizCardFooter");
   var retryButton = document.createElement("button");
@@ -171,6 +181,9 @@ function buildEndQuizCardFooter() {
   quizCardFooter.appendChild(surveyButton);
 }
 
+/* buildAnswerRadButton
+* Erstellt einen Radio Button zum auswählen der Antwort.
+*/
 function buildAnswerRadButton() {
   var radButton = document.createElement("input");
   radButton.type = "radio";
@@ -179,26 +192,32 @@ function buildAnswerRadButton() {
   return radButton;
 }
 
+/* buildQuizCard
+* Erstellt die Quizkarte wenn das Quiz gestartet wurde.
+*/
 function buildQuizCard() {
   clearContainer("answerContainer");
   var answerContainer = document.getElementById("answerContainer");
   answerContainer.style = "text-align:left;";
   answerContainer.appendChild(buildAnswerRadButton());
-  answerContainer.appendChild(document.createTextNode(" blub"));
+  answerContainer.appendChild(document.createTextNode(" ich"));
   answerContainer.appendChild(document.createElement("br"));
   answerContainer.appendChild(buildAnswerRadButton());
-  answerContainer.appendChild(document.createTextNode(" blub"));
+  answerContainer.appendChild(document.createTextNode(" hasse"));
   answerContainer.appendChild(document.createElement("br"));
   answerContainer.appendChild(buildAnswerRadButton());
-  answerContainer.appendChild(document.createTextNode(" blub"));
+  answerContainer.appendChild(document.createTextNode(" javascript"));
   answerContainer.appendChild(document.createElement("br"));
   buildQuizCardFooter();
 }
 
+/* buildQuizCard
+* Erstellt den Footer für die reguläre Quizkarte.
+*/
 function buildQuizCardFooter() {
   clearContainer("quizCardFooter");
   var nextButton = document.createElement("button");
-  nextButton.onclick = function() { nextQuestion(); };
+  nextButton.onclick = function() { checkAnswerAndPrepareNextQuestion(); };
   nextButton.innerHTML = "Nächste Frage";
   nextButton.classList.add('w3-button');
   nextButton.className += ' w3-left';
@@ -231,6 +250,9 @@ function getQuiz(quizName) {
   request.send();
 }
 
+/* clearContainer
+* Leert den Inhalt eines Containers.
+*/
 function clearContainer(id) {
   var div = document.getElementById(id);
   while(div.firstChild){
@@ -238,6 +260,9 @@ function clearContainer(id) {
   }
 }
 
+/* createQuizSurvey
+* Erstellt die Auswertung eines ganzen Quiz.
+*/
 function createQuizSurvey() {
   document.getElementById("Question").innerHTML = "Quiz Auswertung";
 
@@ -245,13 +270,19 @@ function createQuizSurvey() {
   var answerContainer = document.getElementById("answerContainer");
   answerContainer.style = "text-align:left;";
 
-  answerContainer.appendChild(createEvaluationOfAnswer(answerArray[0]));
-  for(var i = 1; i < answerArray.length; i++) {
-    answerContainer.appendChild(document.createElement('hr'));
+  for(var i = 0; i < answerArray.length; i++) {
     answerContainer.appendChild(createEvaluationOfAnswer(answerArray[i]));
+    answerContainer.appendChild(document.createElement('hr'));
   }
+
+  var evaluation = document.createElement("h4");
+  evaluation.innerHTML = getAvgCorrectAnswers() + "% der Fragen waren richtig beantwortet!";
+  answerContainer.appendChild(evaluation);
 }
 
+/* createEvaluationOfAnswer
+* Erstellt die Auswertung einer Antwort des Benutzers.
+*/
 function createEvaluationOfAnswer(answerObject) {
   var heading = document.createElement('h3');
   heading.innerHTML = answerObject.question;
