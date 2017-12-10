@@ -51,11 +51,12 @@
          somit ist er aktiv involviert.</p>
     </div>
     <div class="w3-third w3-container">
-      <img src="../res/img/owasp-logo-negative.png" alt="OWASP Logo" height="40%" width="100%">
+      <img src="../res/img/owasp-logo-negative.png" alt="OWASP Logo"
+           height="40%" width="100%">
     </div>
   </div>
 
-  <div class="w3-row w3-padding-64">
+  <div class="w3-row">
     <div class="w3-twothird w3-container">
       <h3>Video zum Angriff</h3>
       <p>Super wichtig aussehender Text der richtig interessante Informationen.
@@ -67,6 +68,17 @@
         <source src="../res/videos/test.mp4" type="video/mp4">
         Dein Browser Unterstürtzt keine Videos!
       </video>
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h3>Teste dich selbst!</h3>
+      <p>Mit dem Quiz kannst du Teseten ob duch auch wirklich alles Verstanden
+         hast!</p>
+      <button class="w3-button w3-left w3-teal"
+        onclick="location.href='../templates/quiz-template.php?quiz=quiz-test'">
+        Quiz starten!</button>
     </div>
   </div>
 

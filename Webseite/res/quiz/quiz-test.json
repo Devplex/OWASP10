@@ -1,17 +1,89 @@
 {
-  "question":"Wer ist der Erfinder von Linux?",
-  "answers": [
+  "questions" : [
     {
-      "answer":"Linus Torvalds",
-      "correct":"1"
+      "question":"Wer ist der Erfinder von Linux?",
+      "answers": [
+        {
+          "answer":"Linus Torvalds",
+          "correct":"1"
+        },
+        {
+          "answer":"Bill Gates",
+          "correct":"0"
+        },
+        {
+          "answer":"Batman",
+          "correct":"0"
+        }
+      ]
     },
     {
-      "answer":"Bill Gates",
-      "correct":"0"
+      "question":"Wie viele Kalorien werden pro Stunde verbrannt, wenn man den eigenen Kopf gegen die Wand hämmert?",
+      "answers": [
+        {
+          "answer":"0 kcal",
+          "correct":"0"
+        },
+        {
+          "answer":"150 kcal",
+          "correct":"1"
+        },
+        {
+          "answer":"1000 kcal",
+          "correct":"0"
+        }
+      ]
     },
     {
-      "answer":"Batman",
-      "correct":"0"
+      "question":"Welche Farbe hat der Schweiß von Nilpferden, wenn diese verärgert sind?",
+      "answers": [
+        {
+          "answer":"Farblos",
+          "correct":"0"
+        },
+        {
+          "answer":"Braun",
+          "correct":"0"
+        },
+        {
+          "answer":"Rot",
+          "correct":"1"
+        }
+      ]
+    },
+    {
+      "question":"Wie nennt man die Angst vor Spaß?",
+      "answers": [
+        {
+          "answer":"Cherophobia",
+          "correct":"1"
+        },
+        {
+          "answer":"Pteronophobia",
+          "correct":"0"
+        },
+        {
+          "answer":"Funobhobia",
+          "correct":"0"
+        }
+      ]
+    },
+    {
+      "question":"Welches Tier kann sein Zunge nicht ausstrecken?",
+      "answers": [
+        {
+          "answer":"Krokodil",
+          "correct":"1"
+        },
+        {
+          "answer":"Katze",
+          "correct":"0"
+        },
+        {
+          "answer":"Schlange",
+          "correct":"0"
+        }
+      ]
     }
   ]
 }

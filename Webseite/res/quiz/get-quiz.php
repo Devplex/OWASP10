@@ -1,6 +1,6 @@
 <?php
 /*****************************************************************************
-    Datei:  get-qiuz.php
+    Datei:  get-quiz.php
     Autor:  Daniel Nagel
     eMail:  dnagel@fh-bielefeld.de
     Seit:   04.12.2017
