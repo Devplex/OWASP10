@@ -15,11 +15,11 @@
   <h4 class="w3-bar-item"><b>Menü</b></h4>
   <a class="w3-bar-item w3-button w3-hover-black" href="../templates/a1-template.php">Nummer 1 SQL-Injektion</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="../templates/a2-template.php">Nummer 2 Broken Authentication</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="../templates/a3-template.php">Nummer 3 Cross-Site Scripting (XSS)</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="../templates/a3-template.php">Nummer 3 Sensitive Data Exposure</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="../templates/a4-template.php">Nummer 4 XML External Entity (XXE)</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="../templates/a5-template.php">Nummer 5 Broken Access Control</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="../templates/a6-template.php">Nummer 6 Sensitive Data Exposure</a>
-  <a class="w3-bar-item w3-button w3-hover-black" href="../templates/a7-template.php">Nummer 7 Security Misconfiguration</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="../templates/a6-template.php">Nummer 6 Security Misconfiguration</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="../templates/a7-template.php">Nummer 7 Cross-Site Scripting (XSS)</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="../templates/a8-template.php">Nummer 8 Insecure Deserialization</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="../templates/a9-template.php">Nummer 9 Using Components with known Vulnerabilities</a>
   <a class="w3-bar-item w3-button w3-hover-black" href="../templates/a10-template.php">Nummer 10 Insufficient Logging &amp; Monitoring</a>

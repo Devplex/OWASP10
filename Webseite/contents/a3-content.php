@@ -1,3 +1,4 @@
+
 <?php
 /*****************************************************************************
     Datei:  a3-content.php
@@ -5,45 +6,71 @@
     eMail:  dnagel@fh-bielefeld.de
     Seit:   26.11.2017
 
-    Der Inhaltsteil für die A3 - Crosside-Scripting (XSS) Steckbrief Seite.
+    Der Inhaltsteil für die A3 - Sensitive Data Exposure Steckbrief Seite.
  *****************************************************************************/
  ?>
 <div class="w3-main" style="margin-left:250px">
 
   <div class="w3-row w3-padding-64">
     <div class="w3-twothird w3-container">
-      <h1 class="w3-text-teal">Crosside-Scripting (XSS)</h1>
-      <h3>Ziel</h3>
-      <p>Dem Opfer intime Benutzerdaten entlocken oder ihn gezielt auf bösartige
-         Webites umleiten.</p>
-      <h3>Umgebung</h3>
-      <p>Allgemein Websites mit Benutzereingabefeldern</p>
-      <h3>Umsetzung</h3>
-      <p>Einfügen von konkreten HTML Anweisungen innerhalb eines Suchtextfeldes
-         auf einer Website mit der Sicherheitslücke. Dies führt dazu, dass die
-         eingegebene HTML Anweisung interpretiert wird.<br><br>
-    	   Aus der gegebenen Suchanfrage wird eine URL generiert, welche ggf. die
-         eben eingefügten HTML Anweisung inkludiert. Nun kann diese an mögliche
-         Opfer (z.B. via Phising) versendet werden.</p>
-      <h3>Konkretes Beispiel</h3>
-      <p>Angenommen Paypal besitzt eine Lücke, welche XSS erlaubt. Somit ist es
-         als Angreifer möglich innerhalb der ligitimen Paypal Website eine HTML
-         Anweisung zu schreiben und die daraus generierte URL an das Opfer zu
-         versenden welche dem Opfer vorgaugelt er müsse bitte seine
-         vertraulichen Zugangsdaten eingeben, welche wiederum vom Opfer
-         unbemerkt an dritte weitergeleitet werden.<br><br>
-    	   Desweiteren wäre es auch möglich statt gefälschter Eingabeformulare ein
-         bösartiges Skript auszuführen oder durch &lt;Iframe> eine andere
-         bösartige Website innerhalb der Paypal Website zu öffnen.</p>
-      <h3>Schutz</h3>
-      <p>Benutzereingaben darf grundsätzlich nicht vertraut werden und somit
-         dürfen diese niemals interpretierbar sein. Sie bedürfen einer
-         Validierung.</p>
-      <h3>Unterschied Injection</h3>
-      <p>Bei der Injection hat das Opfer (Paypal-Benutzer) nur eine passive
-         Rolle. Bei XSS ist es dem Benutzer noch möglich einem Angriff zu
-         entgehen indem er rechtzeitig bemerkt, dass die URL bösartig ist,
-         somit ist er aktiv involviert.</p>
+      <h1 class="w3-text-teal">Sensitive Data Exposure</h1>
+      <h3>Leicht verwundbar, wenn</h3>
+      <ul>
+        <li>Standardeinstellungen bei Erstellung von Servern oder ähnlichem
+            genutzt werden und somit leicht herauszufinden sind.</li>
+        <li>Die Software die benutzt wird nicht auf dem aktuellen Stand ist, da
+            Lücken im Programm gefunden worden sind und durch ein Update
+            geschlossen werden sollten.</li>
+        <li>Man zu bequem ist, Einstellungen zu überprüfen oder
+            einzurichten.</li>
+        <li>Relevante Informationen bei Warnmeldungen oder als Infomeldungen
+            auftauchen.</li>
+      </ul>
+      <h3>Beispiel Attacken</h3>
+      <ul>
+        <li>Fehler im Programmcode können großen Schaden verursachen;
+            Fehler können ausversehen oder absichtlich
+            (Hintertür in Komponenten) sein.</li>
+        <li>Daten auslesen, welche in Fehler-, Warn,- oder Infomeldungen
+            eingetragen sind.</li>
+        <li>Einloggen mit Standardpasswörtern bei Server Konten</li>
+        <li>Einen Port welcher als Standard offen gelassen wird um Zugriff für
+            bestimmte Funktionen zu gewähren wird genutzt um Zugriff zu
+            erhalten.</li>
+      </ul>
+      <h3>Wie verhindert man Attacke auf verwundbare Stellen der/des
+          Software/Betriebssystems</h3>
+      <ul>
+        <li>Regelmäßige Überprüfungen der Software, ist Sie aktuell? Nein, also
+            Updaten. Ist sie relevant? Nein, also entfernen.</li>
+        <li>Standardeinstellungen bei Benutzerkonten und Passwörtern
+            vermeiden.</li>
+        <li>Benötigt diese Software Zugriffsrechte für das gesamte System oder
+            können diese eingeschränkt werden? Wenn nein, Verwendung von
+            getrennter bzw. segmentierter Anwendungsarchitekur um
+            Zugriffsmöglichkeiten einzuschränken.</li>
+        <li>Ein aufwendiger,doch relativ sicherer Schutz ist es, eine konstante
+          Überwachung des Systems bzw. der Konfigurationen vorzunehmen und somit
+          nicht gewünschtes Verhalten erkennen und isolieren zu können.</li>
+      </ul>
+      <h3>Ziele eines Angreifers (Umgebung und Nutzen)</h3>
+      <ul>
+        <li>Der Angreifer möchte Zugriff auf das Opfersystem erhalten. Daten
+            stehlen oder manipulieren und somit Schaden anrichten bzw. einen
+            Nutzen zu ziehen.</li>
+        <li>Die Umgebung welche angegriffen wird, sind Schwachstellen bei
+            Programmen, Einstellungen welche Lücken hervorrufen und der Nutzer
+            selbst, welcher aufgrund von Unwissenheit oder Unbedachtheit
+            Einstellungen vorgenommen hat, welche der Systemsicherheit
+            Schaden.</li>
+      </ul>
+      <h3>Gefährdete Personengruppen</h3>
+      <ul>
+        <li>Jeder Nutzer der ein System mit Internetzugang besitzt.</li>
+        <li>Nutzer die keine Softwareupdates ausführen.</li>
+        <li>Nutzer die sich auf Standardeinstellungen verlassen bzw.
+            Standardpasswörter bei Konten verwenden.</li>
+      </ul>
     </div>
     <div class="w3-third w3-container">
       <img src="../res/img/owasp-logo-negative.png" alt="OWASP Logo" height="40%" width="100%">

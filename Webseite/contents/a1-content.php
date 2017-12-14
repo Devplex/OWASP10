@@ -13,42 +13,27 @@
   <div class="w3-row w3-padding-64">
     <div class="w3-twothird w3-container">
       <h1 class="w3-text-teal">SQL Injektion</h1>
-      <h3>Ziel</h3>
-      <p>Unautorisierte Manipulationen und Zugriffe auf systeminterne
-         Datenbanken.</p>
-      <h3>Umgebung</h3>
-      <p>Websites mit Datenbank Systemen wie:</p>
+      <h3>Leicht verwundbar, wenn</h3>
       <ul>
-        <li>SQL</li>
-        <li>LDAP</li>
-        <li>XPath</li>
-        <li>NoSQL</li>
-        <li>Betriebssystembefehlen</li>
-        <li>XML</li>
-        <li>SMTP-Headern</li>
+        <li>Eine Website die Eingaben seiner Textfelder interpretiert</li>
       </ul>
-      <h3>Umsetzung</h3>
-      <p>Benutzereingaben, welche an die Datenbank gekoppelt sind und die
-         Benutzereingaben unvalidert interpretieren, realisieren eine
-         Injection.</p>
-      <h3>Konkretes Beispiel</h3>
-      <p>Angenommen Paypal nutzt SQL als Datenbankverwaltung.
-    	   Das Paypal-Website-Suchfeld gibt eine Exception zurück sofern man ein
-         ";" (Semikolon) eingibt. Somit ist nun klar, dass die Möglichkeit
-         besteht, konkrete SQL Befehle über das Suchfeld einzugeben.
-    	   Nun wäre es möglich durch diverse SQL Befehle unbemerkt Umbuchungen
-         vom Vermögen diverser Paypal Anwender zum gunsten des Angreifers zu
-         Manipulieren. (Überweisung von fremd Guthaben auf das eigene Paypal
-         Konto)</p>
-      <h3>Schutz</h3>
-      <p>Benutzereingaben darf grundsätzlich nicht vertraut werden und somit
-         dürfen diese niemals interpretierbar sein. Sie bedürfen einer
-         Validierung.</p>
-      <h3>Unterschied zu XSS</h3>
-      <p>Bei der Injection hat das Opfer (Paypal-Benutzer) nur eine passive
-         Rolle. Bei XSS ist es dem Benutzer noch möglich einem Angriff zu
-         entgehen indem er rechtzeitig bemerkt, dass die URL bösartig ist,
-         somit ist er aktiv involviert.</p>
+      <h3>Beispiel Attacken</h3>
+      <ul>
+        <li>Zugriff auf die Datenbank einer Website:</li>
+        <ul>
+          <li>Manipulation von Daten</li>
+          <li>Auslesen von Daten</li>
+          <li>Sich selbst als jemand anderen ins System einloggen</li>
+          <li>Administratoren aussperren durch das Ändern von Passwörtern</li>
+        </ul>
+      </ul>
+      <h3>Wie verhindert man Attacke auf verwundbare Stellen der Website</h3>
+      <ul>
+        <li>Benutzereingaben werden validiert:</li>
+        <ul>
+          <li>Befehle erkennen und blockieren</li>
+        </ul>
+      </ul>
     </div>
     <div class="w3-third w3-container">
       <img src="../res/img/owasp-logo-negative.png" alt="OWASP Logo"
@@ -61,10 +46,7 @@
       <h3>Video zum Angriff</h3>
       <p>Super wichtig aussehender Text der richtig interessante Informationen.
          Beinhaltet die einen so richtig weiter bringen im Leben!</p>
-    </div>
-    <div class="w3-third w3-container">
-      <h4>Video</h4>
-      <video width="320" height="240" controls>
+      <video style="margin-left:auto;margin-right:auto;" width="320" height="240" controls>
         <source src="../res/videos/test.mp4" type="video/mp4">
         Dein Browser Unterstürtzt keine Videos!
       </video>

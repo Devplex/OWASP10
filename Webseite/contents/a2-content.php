@@ -14,45 +14,37 @@
   <div class="w3-row w3-padding-64">
     <div class="w3-twothird w3-container">
       <h1 class="w3-text-teal">Broken Authentication &amp; Session Managment</h1>
-      <h3>Ziel</h3>
-      <p>Erfassung oder Umgehung von Authentifizierungsmethoden zum Schutz vor
-         unberechtigtem Zugriff ermöglichen.</p>
-      <h3>Umgebung</h3>
-      <p>Websites</p>
-      <h3>Angriffszenarios</h3>
+      <h3>Leicht verwundbar, wenn</h3>
       <ul>
-        <li>Man in the Middle Attack</li>
-    	  <li>Textdaten vom Server stehlen</li>
+        <li>die Anmeldedaten beim Speichern unzureichend geschützt/verschlüsselt
+            sind.</li>
+        <li>die Anmeldedaten durch schwache Kontoverwaltungsfunktionen
+            (Kontoerstellung, Kennwortänderung, etc.) leicht zu erraten oder zu
+            überschreiben sind.</li>
+        <li>die Session ID aus der URL auslesbar ist.</li>
+        <li>Session IDs keine Zeitüberschreitung besitzen oder Benutzersitzungen
+            nicht ungültig werden während der Abmeldung.</li>
+        <li>Passwörter und Session IDs über unverschlüsselte Verbindungen
+            gesendet werden.</li>
       </ul>
-      <h3>Schutz</h3>
+      <h3>Beispiel Attacken</h3>
       <ul>
-        <li>nur starke Passwörter erlauben.</li>
-    	  <li>Session ID sollte nach einer bestimmten Zeit oder nach logout
-            ungültig werden.</li>
-        <li>Daten sollten neben der Verschlüsselung zusätzlich gehasht
-            werden.</li>
-    	  <li>sensible Daten sollten im Body part einer POST Anfrage gesendet
-            werden.</li>
-      </ul>
-      <h3>Gefährdete Personengruppen</h3>
-      <p>Jede Person mit einem Online Account jeglicher Art.</p>
-      <h3>Merkmale</h3>
-      <ul>
-        <li><b>Unencrypted connections</b> Jeder kann Datenübertragung einsehen
-            zwischen User und Webappaplikation durch bspw. Man in the
+        <li>Bei unverschlüsselten Verbindungen kann jeder den Datentransfer
+            beobachten und die Anmeldedaten abfangen z.B. durch Man in The
             Middle.</li>
-        <li><b>Predictable Login Credentials</b> Usernames und Passwörter die
-            leicht zu erraten oder oft benutzt werden, sodass ein Angreifer
-            unautorisierten Zugriff hat.</li>
-        <li><b>Session ID</b> Value hat keinen Timeout oder wird nicht ungültig
-            gemacht nach einem logout. Wenn jemand eine Session ID bekommt kann
-            er ohne Logindaten Zugriff bekommen -> zurück Button im
-            Browser.</li>
-        <li>Authentifizierungsdaten werden beim Speichern nicht geschützt,
-            Daten sind im einfachen Text einsehbar.</li>
-        <li><b>Session IDs werden im URL benutzt</b> Session ID value wird im
-            URL String übertragen und sichtbar gemacht
-            z.B. <i>http://bank.com/login.jsp?sessionid=abcd</i></li>
+        <li>Person nutzt öffentlichen Computer und vergisst sich mit seinem
+            Account abzumelden. Ohne eine Zeitüberschreitung der Session ID
+            kann der nächste Nutzer durch einfaches Betreten der zuletzt
+            besuchten Seiten Zugriff auf den Account beschaffen. </li>
+      </ul>
+      <h3>Wie verhindert man Attacke auf verwundbare Stellen der Website</h3>
+      <ul>
+        <li>Nur starke Passwörter erlauben.</li>
+        <li>Anmeldedaten sollten neben einer starken Verschlüsselung zusätzlich
+            gehasht werden.</li>
+        <li>Session IDs sollten eine Zeitüberschreitung besitzen.</li>
+        <li>Sensible Daten sollten im Body Part einer POST Anfrage gesendet
+            werden.</li>
       </ul>
     </div>
     <div class="w3-third w3-container">
