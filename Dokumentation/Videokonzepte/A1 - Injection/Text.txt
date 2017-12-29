@@ -1,0 +1,49 @@
+Intro:
+
+In diesem Video wird der Injection-Angriff erklärt.
+
+
+Mainpart:
+
+Der Angreifer versucht sich hierbei Vollzugriff auf eine systeminterne Datenbank zu verschaffen,
+um diese auszulesen oder zu manipulieren.
+
+[A]
+Nehmen wir an, der Angreifer, nennen wir ihn Popei, liebt Spinat. Weshalb er sich dazu Berufen fühlt
+alle nicht Spinatgerichte der Website "lecker-kochen.de" zu löschen.
+
+[B]
+Hierzu versucht er eine Eingabemöglichkeit innerhalb der Website zu finden, hinter der
+er eine Kopplung an eine Datenbank vermutet. 
+
+[C]
+Popei versucht mit der Eingabe eines Gänsefüßchens im Suchfeld für Gerichte herauszufinden, ob sich
+an dieser Stelle eine Lücke für den Angriff zeigt.
+
+[D]
+Seine Vermutung bewahrheitet sich, weil er nun auf der Website einen SQL-internen Syntaxfehler
+zu sehen bekommt. 
+
+Popei freut sich, weil er mit der Datenbank nun so umgehen kann wie der Administrator der Website.
+
+[E]
+Durch das Anwenden gezielter SQL-Queries in das Suchfeld, findet er die Namen und Datensätze
+aller Tabellen in sehr kurzer Zeit heraus und löscht nun alle Gerichte die kein Spinat
+als Zutat enthalten.
+
+Und weil er schlecht gelaunt ist ändert er im gleichen Zug das Administratorpasswort, welches
+den Zugang zum Website-Beckend schützt, um den Admin auszusperren.
+
+Doch wie kann man sich schützen ?
+
+[F]
+Zu aller erst darf der Anwender keine Möglichkeit besitzen Rückschlüsse auf das Datenbanksystem zu ziehen.
+Dies bedeutet, dass die Website keine diesbezüglichen Fehlermeldungen sichtbar für den Nutzer ausgibt.
+
+[G]
+Desweiteren darf dem Nutzer in seinen Eingaben grundsätzlich nicht vertraut werden. Dies bedeutet, dass jegliche
+Eingaben die mit Datenbanksystemen in Berührung stehen, vor Ihrerer Ausführung einer Validierung bedürfen,
+welche SQL Querys erkennt und diese ausfiltert.
+
+Hier ein Beispiel aus NodeJS welches das Modul "MySQL" verwendet. Dieses stellt zum Schutz vor SQL-Injections
+extra eine Methode names "escape()" zur verfügung. 
