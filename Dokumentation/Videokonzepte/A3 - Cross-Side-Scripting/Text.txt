@@ -1,0 +1,60 @@
+Intro:
+
+In diesem Video wird der Cross-Side-Scripting Angriff erklärt.
+
+
+Mainpart:
+
+Der Angreifer versucht durch die Manipulation einer vertraunswürdigen Website
+an sensible Daten wie Zugangspasswörtern von deren Benutzern zu kommen um deren
+Identität zu stehlen.
+
+[A]
+Das ist Hans. Hans ist wie an jedem anderne morgen auch, damit beschäftigt seine E-Mails 
+durch zu lesen. Doch heute scheint etwas anders zu sein als sonst. Hans öffnet eine
+Mail von Paypal mit dem Betreff "ACHTUNG: WICHTIG!!11".
+
+[B]
+Hastig öffnet er die Mail und mit Entsetzen stellt er fest, dass sich sein Paypal Konto mit 95.246€ im Minus befindet
+und er sich diezbezüglich einloggen muss um das Problem zu lösen. Anbei in der Mail befindet
+sich ein Link der auf Paypal verweist. 
+
+[C]
+Nervös klickt er auf den Link und wird umgehend auf eine Paypal Website umgeleitet.
+Hans kontrolliert die Adresszeile in seinem Webbrowser und erkennt, dass er sich wirklich auf
+Paypal befindet und ein grünes Schloß Symbol zu sehen ist. Er fühlt sich sicher.
+
+[D]
+Hastig tippt er seine Kontodaten in die Textfelder ein um sich einzuloggen.
+Als er jedoch auf den Einloggenbutton klickt passiert nichts. Auch weitere Versuche ändern nichts daran.
+
+Etwas verwirrt entschließt er sich bei Paypal anzurufen und Hans muss feststellen, dass die besagte Mail
+nie von Paypal verschickt wurde.
+
+Was war passiert ?
+
+Ein Hacker hat eine sogenannte XSS Lücke innerhalb der Paypal Website ausgenutzt um an Hans sensiblen Kontodaten zu gelangen.
+
+[E0] bis [E2]
+Der Hacker probiert hierzu ein Eingabetextfeld innerhalb der Website zu finden, welches die eingegebene HTML Anweisungen ausführt.
+
+
+Der Hacker ist somit in der Lage eine eigene böse HTML Website innerhalb einer vertrauenswürdigen Website aufzubauen. Diese kann er ebenfalls
+mit eigenen Skripten erweitern, die z.B. die eingegebenen Daten abgreifen und irgendwohin verschicken. 
+
+Dadurch, dass diese bösartige Website innerhalb einer vetrauenswürdigen Website aufgezogen wurde, konnte Hans erst hinters Licht
+geführt werden.
+
+Wie schützt man sich ?
+
+[F]
+Hans sollte zu allererst sein Zugangspasswort zum Paypal Konto ändern. 
+Er sollte die Glaubwürdigkeit von E-Mails grundsätzlich hinterfragen und einen genaueren Blick auf beigefügte Links werfen, weil diese
+in der Regel auffällig lang sind, wenn sie durch XSS manipuliert wurden. Er könnte zu guter letzt die Website in der er sensible Daten
+eingeben muss, auf Layout-strutkurrelle-auffäligkeiten untersuchen, so sind z.B. Textboxen die völlig willkürlich platziert erscheinen,
+ein deutliches Anzeichen.
+
+Paypal sollte hingegen alle anfälligen Eingabemöglichkeiten ausfindig machen. Diese werden dann mit einer "Weißen Liste" geschützt.
+Dies bedeutet, dass nicht wie bei einer "Schwarzen Liste" alle gefährdenden Eingaben abgefangen und gefiltert werden, sondern mit der 
+"Weißen Liste" nur die gültigen Eingaben festgelegt werden können. Sollte die Eingabenbreite zu hoch sein, sollten HTML spezifische
+Zeichen geparst und durch Metazeichen (Escaping) ersetzt werden.
