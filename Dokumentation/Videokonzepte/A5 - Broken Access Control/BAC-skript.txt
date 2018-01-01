@@ -1,0 +1,18 @@
+//Einleitungsvideo
+Die meisten Nutzer browsen, indem sie auf Links klicken oder Suchfunktionen nutzen. Deswegen ist man geneigt zu denken, dass alles, was auf einer Website nicht verlinkt oder verzeichnet ist, versteckt sein wird. Jedoch wird diese Sichtweise als Sicheheit durch Obskurität angesehen und wird am besten vermieden. Selbst wenn der Pfad zu sensiblen Daten praktisch unerratbar ist, kann ein Pfad weit verbreitet werden, sobald er entdeckt wird. Noch schlimmer kommt es, wenn sich ein Nutzer auf diese Weise ihm nicht zustehende Befugnisse verschaffen kann. Zugriffskontrollentscheidungen müssen daher jedes Mal evaluiert werden, wenn auf eine Ressource zugegriffen wird. Sehen wir uns an, wie eine defekte Zugriffskontrolle deinem Unternehmen schaden kann. 
+
+//webshop1.png
+Stell dir vor, du betreibst einen Webshop für Unterhaltungselektronik. Friedhelm, einer deiner Nutzer, bemerkt beim Shoppen, dass die Namensstruktur der URL einen Identifikator für den Nutzer beinhaltet. Er prüft daraufhin, was passiert, wenn die User-ID verändert wird. 
+
+//webshop2.png
+Seltsam, Friedhelm scheint sich nicht mehr auf seinem Konto, sondern auf einem völlig fremden Konto zu befinden. Um sich zu vergewissern, sieht er seine Bankkonten durch.
+
+//webshop3.png
+Seine Vermutung bestätigt sich. Nun weiß er, dass er die Zugriffskontrolle umgehen und allerlei Schabernack treiben kann. So beginnt er mit verschiedenen Identitäten Waren einzukaufen. Dies schlägt später auf dein Unternehmen in Form von Rufschädigung und Strafzahlungen zurück.
+Wie lässt sich ein solches Szenario verhindern?
+
+//Textuell die Stichpunkte aufzählen
+Es gibt keine Universallösung um korrekt eine Zugriffskontrolle zu implementieren. Im Großen und Ganzen sollte deine Zugriffskontrollstrategie drei Askepkte decken:
+Authentifikation – korrekt einen Nutzer identifizieren, wenn er zur Applikation zurückkehrt.
+Autorisierung – entscheiden, welche Aktionen ein Nutzer ausführen können sollte und welche nicht, nachdem er authentifiziert wurde.
+Berechtigungsüberprüfung – Autorisierung evaluieren, wenn ein Nutzer versucht, eine Aktion auszuführen.
