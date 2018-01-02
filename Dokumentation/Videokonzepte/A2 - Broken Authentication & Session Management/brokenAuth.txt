@@ -1,0 +1,31 @@
+Broken Authentication & Session Management
+In diesem Video wird Broken Authentication & Session Management vorgestellt
+
+Was ist Broken Authentication und Session Managment
+Broken Authentication und Session Management ist eine Schwachstelle von Anwendungen die einen
+unzureichenden Schutz bezüglich eines Benutzerkontos aufweisen
+
+Beispiel für schlechtes Session Management
+Ein Benutzer ist wird durch eine einzigartige Session ID vom server erkannt.
+Wenn ein Benutzer eingeloggt und autorisiert ist muss er sich nicht erneut autorisieren wenn er
+die Applikation nochmals besucht, da der Benutzer anhand der Session ID erkannt wird.
+
+In einigen Applikationen ist es möglich die Session ID über eine GET-request zu senden. Hier beginnt der Angriff
+
+Ein Hacker namens Tarzan bereitet eine Mail für sein Opfer Jane vor.
+Die Mail enthält einen Link mit vorgefertigter Session ID.
+LINK: <a href=http://localhostattack?Screen=46&menu=320&SID=WHATEVER>
+
+[Bild1]
+Jane erhält die Mail und folgt dem beigefügten Link
+
+[Bild2]
+Der Link führt Jane auf die Login Seite der Applikation. Woraufhin Jane sich einloggt
+
+[Bild3]
+Nun kann Tarzan anhand des selben Links auf den Account zugreifen und Janes Account erobern
+
+Um es zu vehindern
+eine Session ID sollte eine Zeitüberschreitung besitzen
+Session IDs sollten nicht im URL sichtbar sein
+Session IDs sollten im Body Part einer POST Anfrage gesendet werden

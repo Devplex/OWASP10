@@ -1,0 +1,37 @@
+Sensitive Data Exposure
+In diesem Video wird Sensitive Data Exposure vorgestellt
+
+Was ist Sensitive Data Exposure
+Sensitive Data Exposure ist eine Schwachstelle bei der sensible Daten wie Passwörter unzureichend
+oder gar nicht verschlüsselt werden
+
+[Bild1]
+Angenommen Herr Pitty vertraut Frau Wasserfall eine streng Vertrauenswürdige Nachricht mit.
+Diese Nachricht soll nur Herr Gandalf bekommen.
+
+Frau Wasserfall ist aber dafür bekannt über alles zu reden.
+
+[Bild2]
+Plötzlich wird Frau Wasserfall auf dem Weg zu Herr Gandalf von einer Fremden Person darüber befragt,
+was denn Herr Pitty ihr gerade erzählt hat.
+Frau Wasserfall geht der Frage natürlich nach und tut
+das was sie am besten kann. Sie teilt der Fremden Person die Nachricht mit.
+
+[Bild3]
+Schließlich ist Frau Wasserfall bei Herrn Gandalf angekommen und teilt im die vertrauenswürdige Nachricht mit
+
+In anderen Worten inspiziert man den Netzwerk Verkehr, kann man sensible Daten, die von anderen
+Personen aus dem Netzwerk verschickt werden, finden wie z.B. Benutzername und Passwort.
+
+[Bild4]
+Falls nun die Schwachstelle Sensitive Data Exposure gegeben ist, findet man die Daten in einfachem
+Text oder nur schwach verschlüsselt
+
+
+Um das zu Verhindern
+[Bild5]
+eine ordnungsgemäße Verschlüsselung und Schlüsselverwaltung
+[Bild6]
+sensible Daten sollten zusätzlich durch eine Hashfunktion geschützt werden
+
+Sensible Daten nicht unnötig speichern und so Schnell wie möglich verwerfen
