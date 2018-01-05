@@ -1,0 +1,48 @@
+
+//intro
+Viele Web-Anwendungen, die XML-Anfragen akzeptieren und beantworten, sind verwundbar für "XML External Entity"-Angriffe wegen der
+Standardeinstellungen des XML-Parsers. Diese Verwundbarkeit kann ausgenutzt werden, um willkürlich Dateien vom Server zu lesen, einschließlich
+sensibler Dateien wie Konfigurationsdateien. Darüber hinaus können Denial-of-Service-Angriffe und Portscans durchgeführt werden. In diesem
+Video soll dieser Angriff näher beleuchtet werden.
+
+//nacheinander XML-Logo und DTD-Logo einblenden
+XML ist ein feature-reiches und weit verbreitetes Informationsaustauschformat. Der Standard erlaubt die Definition der Struktur des XMLs mittels
+einer Dokumenttypdefinition, kurz DTD. Die DTD stellt einen Mechanismus für die Definition von Entitäten zur Verfügung, dessen Werte in den
+XML-Dokumenteninhalt eingefügt werden können. Das ist hilfreich, wenn der Entitätswert öfters benutzt wird.
+
+//xml1.png einblenden
+Dieses XML-Dokument beinhaltet eine DTD, die eine Entität mit dem Namen "strassenname" definiert. Der Wert der Entität strassenname wird auf 
+"Heidenweg" gesetzt. Danach folgen die XML-Elemente, darunter die Elemente ort und strasse. Der Wert des Elements strasse ist der Name der Entität 
+mit einem & davor und einem ; dahinter. Dieses Konstrukt weist den XML-Parser an, es durch den in der DTD definierten Wert "Heidenweg" zu ersetzen. 
+
+//xml2.png neben xml1.png einblenden
+Hier das geparste XML mit den Substitutionen. Bei dem Beispiel handelt es sich um eine interne Entität, da der Wert vom Parser bestimmt 
+werden kann ohne auf externe Ressourcen zuzugreifen. Neben internen Entitäten gibt es auch externe Entitäten.
+
+//xml3.png
+Externe Entitäten referenzieren etwas außerhalb des Parsers selbst, um den Wert der Entität zu bestimmen. Eine externe Entität wird deklariert 
+mit dem Schlüsselwort SYSTEM, gefolgt von einer URI, von der der Wert geholt werden soll. In diesem Fall ist die URI eine Datei mit dem Pfad
+"/root/addresses.xml", aber auch andere URIs wie eine URL zu einer Webseite können spezifiziert werden. Im resultierenden XML würde nach dem 
+Parsen das Element adressenliste die Inhalte der Datei beinhalten.
+
+//xxe.png + xml4.png
+Betrachten wir ein potentielles Angriffsszenario, in dem ein Webservice seinen Nutzern erlaubt, ihre Daten per XML-Upload zu aktualisieren.
+Ein Angreifer, der die Sicherheitslüche durch den schlecht konfigurierten XML-Parser entdeckt hat, erstellt ein XML-Dokument mit einer
+externen Referenz zum Pfad /etc/passwd - eine Datei, die Nutzerinformationen auf Unix-Systemen enthält. Er hofft, dass die Datei vom Parser
+expandiert wird und er so an die sensiblen Informationen gelangt. Da das Dokument nicht wohlgeformt ist, bricht der Prozess ab.
+
+//xml5.png
+Aber als Teil der Fehlermeldung wird dem Angreifer die expandierte XML-Datei gezeigt. So ist der Angreifer in der Lage sensible Dateien zu 
+lesen und in Synergie mit anderen Angriffsmethoden die Situation eskalieren zu lassen.
+
+Wie verhindert man einen XXE-Angriff?
+
+//Textuell: Deaktiviere das Parsen von Inline DTDs
+Inline DTDs werden als Feature nur selten genutzt. Jedoch bleiben XXE-Angriffe ein Risiko, da viele XML-Parsing-Bibliotheken dieses Feature 
+nicht standardmäßig deaktivieren. Stell sicher, dass deine XML-Parser-Konfiguration dieses Feature deaktiviert. Durch diese simple 
+Konfigurationseinstellung wirst du gegen XXE-Angriffe geschützt sein.
+//Textuell: Beschränke die Berechtigungen deines Web-Server-Prozesses
+Betreibe deine Server-Prozesse nur mit den Berechtigungen, die sie benötigen, um zu funktionieren, folge dem principle of least privilege. 
+Das heißt, dass du den Zugriff auf deine Verzeichnisse beschränkst. So kann ein Angreifer, selbst wenn er es schafft das Sicherheitssystem 
+deines Web-Servers zu durchbrechen, nur beschränkt Schaden anrichten.
+
