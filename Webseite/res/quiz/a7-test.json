@@ -1,0 +1,55 @@
+﻿{
+  "questions" : [
+    {
+      "question":"Welche der folgenden Sprachen ist das Hauptziel von Cross-site scripting?",
+      "answers": [
+        {
+          "answer":"SQL",
+          "correct":"0"
+        },
+        {
+          "answer":"XSLT",
+          "correct":"0"
+        },
+        {
+          "answer":"HTML",
+          "correct":"1"
+        }
+      ]
+    },
+    {
+      "question":"Welche der folgenden Vorgehensweisen ist die beste Möglichkeit, zu verhindern, dass schädliche Eingaben Ihre Anwendung ausnutzen?",
+      "answers": [
+        {
+          "answer":"Nutzung von allow-Listen",
+          "correct":"1"
+        },
+        {
+          "answer":"Nutzung von Verschlüsselung",
+          "correct":"0"
+        },
+        {
+          "answer":"Nutzung von Tabellenumleitung",
+          "correct":"0"
+        }
+      ]
+    },
+    {
+      "question":"Welche der folgenden Eingabequellen können direkt von einem böswilligen Nutzer kontrolliert werden?",
+      "answers": [
+        {
+          "answer":"Serverkonfigurationsdaten",
+          "correct":"0"
+        },
+        {
+          "answer":"GET/POST Parameter",
+          "correct":"1"
+        },
+        {
+          "answer":"Ports und Netzwerkressourcen",
+          "correct":"0"
+        }
+      ]
+    }
+  ]
+}
