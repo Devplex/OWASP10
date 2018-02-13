@@ -70,7 +70,7 @@
       <p>Mit dem Quiz kannst du Testen ob du auch wirklich alles Verstanden
          hast!</p>
       <button class="w3-button w3-left w3-teal"
-        onclick="location.href='../templates/quiz-template.php?quiz=quiz-test'">
+        onclick="location.href='../templates/quiz-template.php?quiz=a2-test'">
         Quiz starten!</button>
     </div>
   </div>
