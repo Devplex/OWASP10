@@ -1,0 +1,55 @@
+{
+  "questions" : [
+    {
+      "question":"Kann ein Angreifer auf eine Seite einer Website zugreifen, die nicht verlinkt ist?",
+      "answers": [
+        {
+          "answer":"Ja, der Angreifer kann ohne Weiteres zugreifen.",
+          "correct":"1"
+        },
+        {
+          "answer":"Nein, die Seite ist nicht zugänglich.",
+          "correct":"0"
+        },
+        {
+          "answer":"Ja, aber nur mithilfe von Hackertools.",
+          "correct":"0"
+        }
+      ]
+    },
+    {
+      "question":"Welche der folgenden Aussagen stellt einen wichtigen Schritt dar, um eine korrekte Zugriffskontrolle zu ermöglichen?",
+      "answers": [
+        {
+          "answer":"Authentifikation - Überprüfen, dass der Nutzer der ist, der er vorgibt zu sein.",
+          "correct":"0"
+        },
+        {
+          "answer":"Regelmäßige Passwort-Resets.",
+          "correct":"0"
+        },
+        {
+          "answer":"Autorisierung - Überprüfen, welche Aktionen ein Nutzer ausführen kann.",
+          "correct":"1"
+        }
+      ]
+    },
+    {
+      "question":"Wie kann eine Zugriffskontrolle umgangen werden?",
+      "answers": [
+        {
+          "answer":"Durch Verwendung von DoS-Angriff-Tools wie LOIC.",
+          "correct":"0"
+        },
+        {
+          "answer":"Durch Senden eines RST-ACK-Pakets.",
+          "correct":"0"
+        },
+        {
+          "answer":"Durch Modifikation der URL, des internen App-Zustands oder der HTML Seite.",
+          "correct":"1"
+        }
+      ]
+    }
+  ]
+}
