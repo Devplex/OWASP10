@@ -1,0 +1,55 @@
+﻿{
+  "questions" : [
+    {
+      "question":"Welche der folgenden Funktionen sollten Sie in ein Authentifizierungs- und Sitzungsverwaltungssystem aufnehmen?",
+      "answers": [
+        {
+          "answer":"Forwarding",
+          "correct":"0"
+        },
+        {
+          "answer":"Timeout Funktion bei Inaktivität",
+          "correct":"1"
+        },
+        {
+          "answer":"Escape Funktionalität",
+          "correct":"0"
+        }
+      ]
+    },
+    {
+      "question":"Welche der folgenden Anforderungen ist für das Authentifizierungssystem wichtig?",
+      "answers": [
+        {
+          "answer":"Forderung für starke Passwörter",
+          "correct":"1"
+        },
+        {
+          "answer":"Session-IDs werden nur von Cookies und Parametervariablen akzeptiert",
+          "correct":"0"
+        },
+        {
+          "answer":"zusätzliche Bestätigungen um automatisierte Angriffe zu verhindern",
+          "correct":"0"
+        }
+      ]
+    },
+    {
+      "question":"Welche der folgenden Aufgaben wird von einem session-basierten System ausgeführt?",
+      "answers": [
+        {
+          "answer":"Zugriff auf geheime Ressourcen bereitstellen",
+          "correct":"1"
+        },
+        {
+          "answer":"Senden erfolgreicher Logins an einen bekannten Ort",
+          "correct":"0"
+        },
+        {
+          "answer":"Verwendung des HTTP Protokolls",
+          "correct":"0"
+        }
+      ]
+    }
+  ]
+}
