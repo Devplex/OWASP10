@@ -1,0 +1,54 @@
+{"questions":[
+  {
+    "question": "Wofür können Inline-DTDs benutzt werden?",
+    "answers":[
+      {
+        "answer":"Zur Beschreibung der Struktur einer XML-Datei zu Validierungszwecken.",
+        "correct":"1"
+      },
+      {
+        "answer":"Zur Deklaration ausführbaren Codes.",
+        "correct":"0"
+      },
+      {
+        "answer":"Zur Referenzierung externer Dateien, die beim Parsen expandiert werden können.",
+        "correct":"0"
+      }
+    ]
+  },
+  {
+    "question": "Wie kannst du die Gefahr einer XML External Entity Schwachstelle mindern?",
+    "answers":[
+      {
+        "answer":"Deaktiviere Inline DTDs in deiner XML Parser Bibliothek.",
+        "correct":"1"
+      },
+      {
+        "answer":"Lass mehrere XML Parsing Prozesse laufen.",
+        "correct":"0"
+      },
+      {
+        "answer":"Verhindere, dass XML Parsing Code auf die Festplatte zugreift.",
+        "correct":"0"
+      }
+    ]
+  },
+  {
+    "question": "Was können die Folgen eines XML-External-Entity-Angriffs sein?",
+    "answers":[
+      {
+        "answer":"Datenverlust oder Datenverfälschung.",
+        "correct":"0"
+      },
+      {
+        "answer":"Offenlegung vertraulicher Daten, Portscans oder Denial of Service.",
+        "correct":"1"
+      },
+      {
+        "answer":"Anfälligkeit für Man-in-the-Middle-Angriff.",
+        "correct":"0"
+      }
+    ]
+  }
+  ]
+}
