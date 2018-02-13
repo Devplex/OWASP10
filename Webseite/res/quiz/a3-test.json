@@ -1,0 +1,55 @@
+﻿{
+  "questions" : [
+    {
+      "question":"Welche der folgenden Faktoren führt am ehesten zu einer unsicheren Kryptographie?",
+      "answers": [
+        {
+          "answer":"Neue Produkte",
+          "correct":"0"
+        },
+        {
+          "answer":"fehlende Patches",
+          "correct":"0"
+        },
+        {
+          "answer":"Benutzerdefinierte kryptografische Algorithmen",
+          "correct":"1"
+        }
+      ]
+    },
+    {
+      "question":"Welche der folgenden Faktoren kann zu unsicherer Kryptographie führen?",
+      "answers": [
+        {
+          "answer":"ungenutzte/unnötige services",
+          "correct":"0"
+        },
+        {
+          "answer":"Default accounts",
+          "correct":"0"
+        },
+        {
+          "answer":"Unsalted hash",
+          "correct":"1"
+        }
+      ]
+    },
+    {
+      "question":"Welche der folgenden Situationen kann zu einer kryptographischen Schwäche führen?",
+      "answers": [
+        {
+          "answer":"fehlende Patches",
+          "correct":"0"
+        },
+        {
+          "answer":"schlechte/schwache Algorithmenwahl ",
+          "correct":"1"
+        },
+        {
+          "answer":"ungenutzte/unnötige services und features",
+          "correct":"0"
+        }
+      ]
+    }
+  ]
+}
