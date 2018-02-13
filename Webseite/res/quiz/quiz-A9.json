@@ -1,0 +1,50 @@
+{"questions":[
+  {
+    "question": "Der Programmierer sollte immer darauf achten, dass die Versionen der Komponenten auf dem neusten Stand sind.",
+    "answers":[
+      {
+        "answer":"Wahr",
+        "correct":"1"
+      },
+      {
+        "answer":"Falsch",
+        "correct":"0"
+      }
+    ]
+  },
+  {
+    "question": "Wann ist ein Programm mit Komponenten mit bekannten Fehlern leicht verwundbar?",
+    "answers":[
+      {
+        "answer":"Benutzte Komponenten sind auf dem neusten Stand",
+        "correct":"0"
+      },
+      {
+        "answer":"Computer neu starten",
+        "correct":"0"
+      },
+      {
+        "answer":"Die Schwachstellen sind nicht bekannt",
+        "correct":"1"
+      }
+    ]
+  },
+  {
+    "question": "Welche Schutzmaßnahmen helfen bei Fehlern in Komponenten?",
+    "answers":[
+      {
+        "answer":"Komponenten nur von nicht offiziellen Quellen nutzen",
+        "correct":"0"
+      },
+      {
+        "answer":"Ungenutzte Abhängigkeiten löschen",
+        "correct":"1"
+      },
+      {
+        "answer":"Versionen veralten lassen",
+        "correct":"0"
+      }
+    ]
+  }
+  ]
+}

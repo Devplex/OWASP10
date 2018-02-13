@@ -1,0 +1,50 @@
+{"questions":[
+  {
+    "question": "Welche Ereignisse sollten überprüft werden?",
+    "answers":[
+      {
+        "answer":"Login Versuche",
+        "correct":"1"
+      },
+      {
+        "answer":"Wie oft die Hilfe aufgerufen wurde",
+        "correct":"0"
+      },
+      {
+        "answer":"Welcher Browser benutzt wird",
+        "correct":"0"
+      }
+    ]
+  },
+  {
+    "question": "Wie können verdächtige Aktivitäten innerhalb eines Zeitraumes erkannt werden?",
+    "answers":[
+      {
+        "answer":"Eingabefehler nicht protokollieren",
+        "correct":"0"
+      },
+      {
+        "answer":"Tägliches löschen des Protokolls",
+        "correct":"0"
+      },
+      {
+        "answer":"Wirksame Überwachung",
+        "correct":"1"
+      }
+    ]
+  },
+  {
+    "question": "Anwendungen sind leicht angreifbar, wenn überprüfbare Ereignisse, wie Einloggen oder fehlgeschlagene Einlogversuche nicht gespeichert werden.",
+    "answers":[
+      {
+        "answer":"Wahr",
+        "correct":"1"
+      },
+      {
+        "answer":"Falsch",
+        "correct":"0"
+      }
+    ]
+  }
+  ]
+}
